@@ -172,10 +172,9 @@ $(function() {
 
   // Gets the 'X is typing' messages of a user
   const getTypingMessages = (data) => {
-    return $(".message.typing:contains(data.username)");
-    //return $('.message.typing').filter(i => {
-        //return $(this).data('username') === data.username;
-    //});
+    return $('.message.typing').filter(i => {
+        return $(this).data('username') === data.username;
+    });
   }
 
   // Gets the color of a username through our hash function
