@@ -108,6 +108,7 @@ $(function() {
 
   // Removes the visual chat typing message
   const removeChatTyping = (data) => {
+    console.log(data);
     console.log(getTypingMessages(data));
     getTypingMessages(data).fadeOut(() => {
       $(this).remove();
