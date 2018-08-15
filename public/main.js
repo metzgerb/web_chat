@@ -174,7 +174,8 @@ $(function() {
   const getTypingMessages = (data) => {
     console.log(data.username);
     return $('.message.typing').filter(i => {
-      return $(this).data('username') === data.username;
+        return $(this.username).text() === data.username;
+      //return $(this).data('username') === data.username;
     });
   }
 
