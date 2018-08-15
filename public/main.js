@@ -101,9 +101,9 @@ $(function() {
 
   // Adds the visual chat typing message
   const addChatTyping = (data) => {
-    data.typing = true;
-    data.message = 'is typing...';
-    addChatMessage(data);
+    //data.typing = true;
+    //data.message = 'is typing...';
+    //addChatMessage(data);
   }
 
   // Removes the visual chat typing message
@@ -171,7 +171,7 @@ $(function() {
 
   // Gets the 'X is typing' messages of a user
   const getTypingMessages = (data) => {
-    return $('.message.typing').filter(i => {
+    return $('.typing.message').filter(i => {
       return $(this).data('username') === data.username;
     });
   }
