@@ -1,19 +1,16 @@
 {
-  "name": "web_chat",
-  "version": "1.0.0",
-  "description": "Simple Web Chat App",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Brian Metzger",
-  "license": "ISC",
+  "name": "socket.io-chat",
+  "version": "0.0.0",
+  "description": "A simple chat client using socket.io",
+  "main": "index.js",
+  "author": "Grant Timmerman",
+  "private": true,
+  "license": "BSD",
   "dependencies": {
-    "express": "^4.13.2",
-    "socket.io": "^1.7.3",
-    "express-handlebars": "^2.0.1",
-    "express-session": "^1.11.3",
-    "forever": "^0.15.3"
+    "express": "4.13.4",
+    "socket.io": "^1.7.3"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
