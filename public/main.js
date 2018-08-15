@@ -91,10 +91,10 @@ $(function() {
       .text(data.message);
 
     var typingClass = data.typing ? 'typing' : '';
-    var $messageDiv = $('<li class="message"/>')
-      .data('username', data.username)
-      .addClass(typingClass)
-      .append($usernameDiv, $messageBodyDiv);
+    var $messageDiv = $('<li class="message"/>');
+      $messageDiv.data('username', data.username);
+      $messageDiv.addClass(typingClass);
+      $messageDiv.append($usernameDiv, $messageBodyDiv);
 
     addMessageElement($messageDiv, options);
   }
@@ -171,9 +171,9 @@ $(function() {
   }
 
   // Gets the 'X is typing' messages of a user
-  const getTypingMessages = (dataset) => {
+  const getTypingMessages = (data) => {
     return $('.message.typing').filter(i => {
-        return $(this).data('username') === dataset.username;
+        return $(this).data('username') === data.username;
     });
   }
 
